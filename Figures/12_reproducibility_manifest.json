@@ -1,0 +1,94 @@
+{
+  "project": "PRISM-AE Stage 1",
+  "seed": 20260829,
+  "pipes": [
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "channels": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "bands_khz": [
+    [
+      20.0,
+      60.0
+    ],
+    [
+      60.0,
+      100.0
+    ],
+    [
+      100.0,
+      140.0
+    ],
+    [
+      140.0,
+      190.0
+    ],
+    [
+      190.0,
+      250.0
+    ],
+    [
+      250.0,
+      400.0
+    ]
+  ],
+  "bin_seconds": 10.0,
+  "observation_fractions": [
+    0.1,
+    0.15000000000000002,
+    0.20000000000000004,
+    0.25000000000000006,
+    0.30000000000000004,
+    0.3500000000000001,
+    0.40000000000000013,
+    0.45000000000000007,
+    0.5000000000000001,
+    0.5500000000000002,
+    0.6000000000000002,
+    0.6500000000000001,
+    0.7000000000000002,
+    0.7500000000000002,
+    0.8000000000000002,
+    0.8500000000000002,
+    0.9000000000000002
+  ],
+  "rupture_min": {
+    "B": 113.73991253333334,
+    "C": 109.05627306666666,
+    "D": 117.50386346666666,
+    "E": 115.7660672
+  },
+  "endpoint_source": "exploratory_AE_proxy:existing_all_rms_gt3",
+  "pressure_start_min": {
+    "B": 14.666666666666666,
+    "C": 18.7,
+    "D": 15.049999999999999,
+    "E": 18.95
+  },
+  "pressure_alignment_source": "exploratory_AE_proxy_or_actual_log",
+  "actual_pressure_logs_found": {
+    "B": false,
+    "C": false,
+    "D": false,
+    "E": false
+  },
+  "decision_gate": {
+    "verdict": "PIVOT",
+    "pressure_MAE_min": 3.561730479833315,
+    "raw_AE_MAE_min": 6.10063538414699,
+    "PRISM_MAE_min": 4.504941131292366,
+    "PRISM_relative_gain": -0.264818086825853,
+    "pipes_won_out_of_4": 2,
+    "next_step": "Do not claim RUL value yet; focus on pressure confounding, damage detectability, or collect additional tests.",
+    "labels_are_physical": false,
+    "pressure_alignment_is_external": false,
+    "exploratory_inputs": true
+  }
+}
